@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta name="google-site-verification" content="AKz9f9txrRG2SlxanR3gY6cnfy3sEe59FGYG5Qe0Grg" />
+<!-- 网站图标 favicon -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+
+<!-- ✅ 1. 编码核心（防乱码最关键） -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- ✅ 2. 兼容移动端 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="FreeStyle Reboot 街头篮球专题服务页面，提供游戏资讯、功能介绍、视频展示与客服联系方式，支持台湾服务器玩家交流。">
+<meta name="keywords" content="FreeStyle Reboot,街头篮球,FreeStyle篮球,街头篮球攻略,FreeStyle Reboot资讯,台湾服务器,篮球游戏,游戏社区,游戏服务">
+<meta name="author" content="FreeStyle Reboot">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="FreeStyle Reboot 街頭籃球輔助 街头篮球改能力 街头篮球辅助">
+<meta property="og:description" content="FreeStyle Reboot 輔助服務Freestyle輔助 Freestyle外掛 街頭籃球外掛 街头篮球改能力 改技能 命中百分百 街头篮球脚本 加速 街頭籃球腳本 FreeStyle Reboot 街头篮球辅助">
+<meta property="og:type" content="website">
+
+<link rel="canonical" href="https://www.svip44.cn/">
+
+
+<title>FreeStyle Reboot 街头篮球资讯与服务中心 | 台湾服务器玩家交流</title>
+
+<style>
+
+/* ===== 全局字体（防乱码核心） ===== */
+body {
+    margin: 0;
+    font-family:
+        "PingFang SC",
+        "Microsoft YaHei",
+        "Noto Sans CJK SC",
+        Arial,
+        sans-serif;
+    background: #050816;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ===== 动态科技背景 ===== */
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at center, #0f172a, #050816);
+}
+
+/* ===== 顶部七彩标题 ===== */
+.title {
+    text-align: center;
+    font-size: 52px;
+    font-weight: bold;
+    margin-top: 70px;
+
+    background: linear-gradient(
+        90deg,
+        #ff004c,
+        #ff9900,
+        #ffee00,
+        #00ff88,
+        #00d9ff,
+        #7a00ff
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    from { filter: drop-shadow(0 0 5px #00d9ff); }
+    to { filter: drop-shadow(0 0 25px #ff00ff); }
+}
+
+/* ===== 联系方式 ===== */
+.contact {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    color: #22c55e;
+}
+
+.contact span {
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+/* ===== 卡片区 ===== */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 60px 20px;
+}
+
+.card {
+    width: 360px;
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid #1f2a44;
+    border-radius: 14px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #22d3ee;
+}
+
+.card h2 {
+    color: #38bdf8;
+}
+
+.price {
+    font-size: 28px;
+    color: #22c55e;
+    margin: 10px 0;
+}
+
+.list {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #cbd5e1;
+}
+
+/* ===== 视频区 ===== */
+.video {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+iframe {
+    width: 600px;
+    height: 450px;
+    border-radius: 12px;
+    border: 1px solid #1f2a44;
+    margin-bottom: 25px;
+}
+
+/* ===== 按钮 ===== */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background: linear-gradient(90deg, #5865F2, #8b5cf6);
+}
+
+.btn:hover {
+    box-shadow: 0 0 20px #38bdf8;
+}
+
+/* ===== 手机适配 ===== */
+@media (max-width: 768px) {
+    .title { font-size: 34px; }
+    iframe { width: 95%; height: 240px; }
+}
+
+
+/* ===== 自我介绍板块 ===== */
+.intro-box {
+    width:850px;
+    max-width:90%;
+    margin:50px auto;
+    padding:35px;
+    background:rgba(15,23,42,0.85);
+    border:1px solid #38bdf8;
+    border-radius:18px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 30px rgba(56,189,248,.35);
+}
+.intro-box h2 {
+    text-align:center;
+    color:#38bdf8;
+    font-size:32px;
+}
+.intro-content {
+    color:#e2e8f0;
+    font-size:18px;
+    line-height:2;
+}
+.intro-content span {
+    color:#22c55e;
+    font-weight:bold;
+}
+
+
+/* ===== 页尾模块 ===== */
+.footer {
+    margin-top: 60px;
+    padding: 35px 20px;
+    text-align: center;
+    background: rgba(15,23,42,0.95);
+    border-top: 1px solid #1f2a44;
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 2;
+}
+.footer-title {
+    color: #38bdf8;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.footer a {
+    color: #5865F2;
+    text-decoration: none;
+    font-weight: bold;
+}
+.footer a:hover {
+    color: #8b5cf6;
+}
+
+
+.lock-banner{display:block;max-width:220px;width:100%;height:auto;margin:0 auto 15px;}
+
+/* ===== VIP密码隐藏 ===== */
+.vip-lock{
+width:360px;
+max-width:90%;
+margin:40px auto;
+padding:25px;
+text-align:center;
+background:rgba(15,23,42,.85);
+border:1px solid #38bdf8;
+border-radius:15px;
+}
+
+.vip-lock input{
+padding:12px;
+border-radius:8px;
+background:#050816;
+color:white;
+border:1px solid #38bdf8;
+}
+
+.vip-lock button{
+padding:12px 20px;
+border:0;
+border-radius:8px;
+background:linear-gradient(90deg,#00d9ff,#7a00ff);
+cursor:pointer;
+}
+
+.vip-hidden{
+display:none;
+}
+
+/* VIP套餐隐藏 */
+.vip-package-hidden{
+display:none !important;
+}
+
+
+/* ===== LINE二维码模块 ===== */
+.contact-box {
+    display:flex;
+    justify-content:center;
+    align-items:stretch;
+    gap:25px;
+    flex-wrap:wrap;
+    margin:40px auto;
+}
+
+.line-section,
+.dc-section {
+    text-align:center;
+    padding:25px;
+    width:300px;
+    max-width:90%;
+    background:rgba(15,23,42,.85);
+    border:1px solid #38bdf8;
+    border-radius:15px;
+    box-shadow:0 0 25px rgba(56,189,248,.4);
+}
+
+.line-section {
+    border-color:#00c300;
+    box-shadow:0 0 25px rgba(0,195,0,.5);
+}
+
+.line-code,
+.dc-code {
+    width:200px;
+    height:200px;
+    background:white;
+    padding:10px;
+    border-radius:15px;
+    margin:20px auto;
+    display:block;
+}
+
+.line-title {
+    color:#00c300;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.dc-title {
+    color:#5865F2;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.line-title {
+    color:#00c300;
+    font-size:24px;
+    font-weight:bold;
+}
+
+
+/* ===== 顶部网站Logo ===== */
+.site-logo {
+    display: block;
+    margin: 25px auto 10px;
+    max-width: 320px;
+    width: 70%;
+    height: auto;
+}
+
+
+/* ===== 随机小悟空彩蛋（新增，不影响原页面） ===== */
+.random-goku {
+    position: fixed;
+    width: 888px;
+    max-width: none;
+    z-index: 99999;
+    pointer-events: none;
+    animation: gokuShow 2.8s ease forwards;
+}
+
+@keyframes gokuShow {
+    0% {
+        opacity: 0;
+        transform:translateX(-250px) scale(.5);
+    }
+    25% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1) translateY(0) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform:translateX(0) scale(1);
+    }
+}
+
+
+/* 第二个随机悟空 */
+.random-goku2{
+position:fixed;width:888px;max-width:none;z-index:99998;pointer-events:none;
+animation:gokuShow2 3.2s ease forwards;
+}
+@keyframes gokuShow2{
+0%{opacity:0;transform:translateX(888px) scale(.7);}
+20%,80%{opacity:1;}
+100%{opacity:0;transform:translateX(888px) scale(1);}
+}
+
+
+.vip-img{display:block;width:100%;max-width:320px;height:auto;margin:0 auto 15px;border-radius:10px;}
+</style>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "FreeStyle Reboot",
+  "description": "FreeStyle Reboot 街头篮球资讯与玩家交流页面",
+  "url": "https://www.svip44.cn/"
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+
+<!-- ===== 网站Logo ===== -->
+<img src="logo.png" class="site-logo" alt="FreeStyle Reboot 街头篮球服务Logo">
+
+
+
+<!-- ===== 标题 ===== -->
+<div class="title">街頭籃球輔助 《FreeStyle: Reboot》輔助 街头篮球辅助 🔥(支援臺灣服務器,支援台湾服务器)🎮(服務時間12:00-24:00)(服务时间12:00-24:00)(Service hours:12:00–24:00)
+</div>
+
+<div class="contact">
+🎮 Discord 聯絡方式： <span>fsgm04</span><br>
+</div>
+
+<!-- ===== LINE + Discord 二维码联系模块 ===== -->
+<div class="contact-box">
+
+    <div class="line-section">
+        <div class="line-title">🔳 LINE 聯絡方式</div>
+        <img src="line_qrcode.jpg" class="line-code" alt="FreeStyle Reboot LINE 联系二维码">
+        <p style="color:#00c300;font-size:22px;">
+            ✅ 掃碼添加 LINE 好友
+        </p>
+        <p style="color:#cbd5e1;">
+           (建議掃碼添加 目前無法通過ID添加)
+        </p>
+    </div>
+
+    <div class="dc-section">
+        <div class="dc-title">💬 Discord 聯絡方式</div>
+        <img src="qrcode.jpg" class="dc-code" alt="FreeStyle Reboot Discord 联系二维码">
+        <p style="color:#5865F2;font-size:22px;">
+            ✅ Discord: fsgm04(建議通過ID添加,这个二维碼有效期只有7天)
+        </p>
+        <p style="color:#cbd5e1;">
+            掃碼聯絡客服
+        </p>
+    </div>
+
+</div>
+
+
+
+<!-- ===== VIP密码验证 ===== -->
+<div class="vip-lock">
+<img src="LOCK.gif" class="lock-banner" alt="LOCK">
+<h2 style="color:#38bdf8;">🔒 需要變強請找客服要解鎖密碼!!!</h2>
+<p>輸入密碼查看功能介紹:</p>
+<input id="vipPassword" type="password" placeholder="請輸入密碼">
+<button onclick="unlockVIP()">解鎖功能介紹</button>
+<p id="vipMsg"></p>
+</div>
+
+
+
+
+<!-- ===== 价格卡片 ===== -->
+<div class="container">
+
+    <div class="card vip-package-hidden" id="vipGodCard">
+        <img src="VIP2.gif" class="vip-img" alt="VIP1"><h2>🚀上帝之手版🚀(開啟功能以後能力提升相當於自在極易悟空效果)</h2>
+        <div class="price">¥X00 / 月</div>
+        <div class="list">
+			<span style="color:#ffd700; font-size:20px;">• 所有功能比賽中都可以隨意關閉✅</span><br>
+			<span style="color:#ffd700; font-size:20px;">• 命中加強✅</span><br>
+            <span style="color:#ffd700; font-size:20px;">• 自動蓋冒✅</span><br>
+            <span style="color:#ffd700; font-size:20px;">• 加強帽✅</span><br>
+            <span style="color:#ffd700; font-size:20px;">• 抓帽✅</span><br>
+			<span style="color:#ffd700; font-size:20px;">• 抓扣✅</span><br>
+			<span style="color:#ffd700; font-size:20px;">• 自動籃板✅</span><br>
+			<span style="color:#ffd700; font-size:20px;">• 加強籃板✅</span><br>
+			<span style="color:#ffd700; font-size:20px;">• 自動補籃✅</span><br>
+			<span style="color:#ffd700; font-size:20px;">• 自動撲球✅</span><br>
+			<span style="color:#ffd700; font-size:20px;">• 卡位不到✅</span><br>
+			<span style="color:#ffd700; font-size:20px;">• A人大力大夢不倒✅</span><br>
+			<span style="color:#ffd700; font-size:20px;">• 增加自由灌籃技能✅</span><br>
+			<span style="color:#ffd700; font-size:20px;">• 超人無障礙灌籃✅</span><br>
+			<span style="color:#ffd700; font-size:20px;">• 搶斷加強✅</span><br>
+			<span style="color:#ffd700; font-size:20px;">• 遊戲整體速率控制✅</span><br>
+            <span style="color:#ffd700; font-size:20px;">• 操作反饋優化✅</span>
+        </div>
+        <a class="btn" href="https://discord.gg/Q7EA7KFrhU" target="_blank">
+添加DC群组聯絡我立即體驗
+</a>
+    </div>
+
+    <div class="card vip-package-hidden" id="vipPureCard">
+        <img src="VIP1.gif" class="vip-img" alt="VIP2"><h2>🔥純享版🔥(開啟功能以後能力提升相當於超級第三形態悟空效果)</h2>
+        <div class="price">¥X20 / 月</div>
+        <div class="list">
+            <span style="color:#ffd700; font-size:20px;">• 所有功能比賽中都可以隨意關閉✅</span><br>
+			<span style="color:#ffd700; font-size:20px;">• 命中加強✅</span><br>
+            <span style="color:#ffd700; font-size:20px;">• 加強帽✅</span><br>
+			<span style="color:#ffd700; font-size:20px;">• 卡位不到✅</span><br>
+			<span style="color:#ffd700; font-size:20px;">• 加強籃板✅</span><br>
+			<span style="color:#ffd700; font-size:20px;">• 增加自由灌籃技能✅</span><br>
+			<span style="color:#ffd700; font-size:20px;">• 超人無障礙灌籃✅</span><br>
+			<span style="color:#ffd700; font-size:20px;">• 搶斷加強✅</span><br>
+			<span style="color:#ffd700; font-size:20px;">• 遊戲整體速率控制✅</span><br>
+            <span style="color:#ffd700; font-size:20px;">• 操作反饋優化✅</span>
+        </div>
+        <a class="btn" href="https://discord.gg/Q7EA7KFrhU" target="_blank">
+添加DC群组聯絡我立即體驗
+</a>
+    </div>
+
+</div>
+
+
+<!-- ===== 自我介绍板块（新增，不影响原二维码模块） ===== -->
+<div class="intro-box">
+<h2>關於我們/ABOUT US/(服務時間12:00-24:00)(服务时间12:00-24:00)(Service hours:12:00–24:00)</h2>
+<div class="intro-content">
+<p><span>🔥 核心介紹：</span><br>專注 Freestyle輔助 Freestyle外掛 街頭籃球外掛 街头篮球辅助 街头篮球改能力 改技能 命中百分百 街头篮球脚本 加速 街頭籃球腳本 FreeStyle Reboot 競技體驗研究與技術服務，持續優化👤用戶體驗。</p>
+<p><span>⚡ 服務理念：</span><br>重視用戶反饋，提供穩定、高效、專業的交流支持。</p>
+<p><span>🚀 技術方向：</span><br>持續完善產品體驗，為用戶提供更好的服務環境。</p>
+<p><span>💬 聯絡方式：</span><br>🎮Discord:fsgm04</p>
+</div>
+</div>
+
+
+
+<!-- ===== 视频 ===== -->
+<div class="video">
+
+<h2 style="color:#38bdf8;">以下是演示視頻</h2>
+
+<iframe src="https://www.youtube.com/embed/oKFcDR-_JK4" allowfullscreen></iframe>
+
+<iframe src="https://www.youtube.com/embed/dyeNxghd5ro" allowfullscreen></iframe>
+
+</div>
+
+
+<!-- ===== 网站页尾 ===== -->
+<div class="footer">
+    <div class="footer-title">FreeStyle Reboot</div>
+    <div>專注街頭籃球競技體驗與技術服務</div>
+    <div>
+        Discord：
+        <a href="https://discord.gg/Q7EA7KFrhU" target="_blank">
+            點擊加入💬Discord群组
+        </a>
+    </div>
+    <div>© FreeStyle Reboot All Rights Reserved.</div>
+</div>
+
+
+
+<script>
+async function checkPassword(pwd){
+    if (window.crypto && window.crypto.subtle) {
+        const data = new TextEncoder().encode(pwd);
+        const hashBuffer = await window.crypto.subtle.digest("SHA-256", data);
+        return Array.from(new Uint8Array(hashBuffer))
+            .map(b => b.toString(16).padStart(2,"0"))
+            .join("");
+    }
+
+    return "";
+}
+
+async function unlockVIP(){
+
+    var pwd = document.getElementById("vipPassword").value.trim();
+
+    const inputHash = await checkPassword(pwd);
+
+    if(inputHash === "49580583e5ed05f36121404f82b3d280d0efbce821ec648856a7fb96fbab623b"){
+
+        document.getElementById("vipGodCard").classList.remove("vip-package-hidden");
+        document.getElementById("vipPureCard").classList.remove("vip-package-hidden");
+
+        document.getElementById("vipMsg").innerHTML="✅ 密碼正確，功能介紹已解鎖!";
+
+    }else{
+
+        document.getElementById("vipMsg").innerHTML="❌ 密碼錯誤,請諮詢客服!";
+
+    }
+}
+</script>
+
+
+
+<script>
+/* ===== 随机小悟空出现效果（新增，不修改原功能） ===== */
+function showRandomGoku(){
+
+    const goku = document.createElement("img");
+
+    goku.src = "goukong.gif";
+    goku.className = "random-goku";
+
+    goku.style.left = Math.floor(Math.random() * 80 + 5) + "vw";
+    goku.style.top = Math.floor(Math.random() * 70 + 10) + "vh";
+
+    document.body.appendChild(goku);
+
+    setTimeout(function(){
+        goku.remove();
+    },3000);
+}
+
+function randomGokuLoop(){
+
+    // 随机 20~60 秒出现一次
+    let delay = Math.floor(Math.random()*2000)+4000;
+
+    setTimeout(function(){
+        showRandomGoku();
+        randomGokuLoop();
+    }, delay);
+}
+
+randomGokuLoop();
+</script>
+
+<script>
+function showRandomGoku2(){
+ const g=document.createElement('img');
+ g.src='goukong2.gif';
+ g.className='random-goku2';
+ g.style.right=Math.floor(Math.random()*75+5)+'vw';
+ g.style.top=Math.floor(Math.random()*75+5)+'vh';
+ document.body.appendChild(g);
+ setTimeout(()=>g.remove(),3200);
+}
+(function loop2(){
+ setTimeout(()=>{showRandomGoku2();loop2();},Math.floor(Math.random()*2000)+4000);
+})();
+</script>
+</body>
+</html>
