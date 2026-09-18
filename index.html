@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -40,7 +41,7 @@ body {
         "Noto Sans CJK SC",
         Arial,
         sans-serif;
-    background: #050816 url('gpic.jpg') center center / cover fixed no-repeat;
+    background: #050816;
     color: white;
     overflow-x: hidden;
 }
@@ -48,10 +49,11 @@ body {
 /* ===== 动态科技背景 ===== */
 .background {
     position: fixed;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     z-index: -1;
-    background: radial-gradient(circle at center, #0f172a, #050816);
+    background:
+        linear-gradient(rgba(5,8,22,0.35), rgba(5,8,22,0.35)),
+        url('gpic.jpg') center center / cover no-repeat;
 }
 
 /* ===== 顶部七彩标题 ===== */
@@ -717,6 +719,7 @@ function showRandomGoku2(){
 })();
 </script>
 
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"3c119a05abfa49afbb1b70c30726be87","r":1,"spa":2}' crossorigin="anonymous"></script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"3c119a05abfa49afbb1b70c30726be87","r":1,"spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
