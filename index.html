@@ -44,6 +44,8 @@ body {
     background: #050816;
     color: white;
     overflow-x: hidden;
+    position: relative;
+    z-index: 0;
 }
 
 /* ===== 动态科技背景 ===== */
@@ -51,10 +53,13 @@ body {
     position: fixed;
     inset: 0;
     z-index: -1;
-    background:
-        linear-gradient(rgba(5,8,22,0.35), rgba(5,8,22,0.35)),
-        url('gpic.jpg') center center / cover no-repeat;
+    pointer-events: none;
+    background-image: url('./gpic.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
 
 /* ===== 顶部七彩标题 ===== */
 .title {
